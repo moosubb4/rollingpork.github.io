@@ -27,6 +27,7 @@ const appRoutes: Routes = [
       // preloadingStrategy: PreloadAllModules
     })
   ],
+  exports: [RouterModule],
   declarations: []
 })
 export class AppRoutingModule { }
