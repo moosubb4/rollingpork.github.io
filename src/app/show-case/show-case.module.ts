@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ShowcaseRoutingModule } from './showcase.routing';
 import { SharedModule } from '../shared/shared.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
-    ShowcaseRoutingModule
+    ShowcaseRoutingModule,
   ],
   declarations: []
 })

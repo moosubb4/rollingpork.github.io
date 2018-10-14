@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SampleServiceService } from '../services/sample-service.service';
-import { tap, take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +7,10 @@ import { tap, take } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private _serviceSample: SampleServiceService) { }
+  constructor() { }
 
   ngOnInit() {
-    this._serviceSample.getBNKdata().pipe(tap(e => console.log(e))).subscribe(e => e);
+   
   }
 
 }
