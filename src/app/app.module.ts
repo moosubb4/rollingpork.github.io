@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routing';
 import { ShowcaseRoutingModule } from './show-case/showcase.routing';
 import { ResumeRoutingModule } from './resume/resume.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -29,7 +30,8 @@ import { ResumeRoutingModule } from './resume/resume.routing';
     AppRoutingModule,
     ShowcaseRoutingModule,
     ResumeRoutingModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule
   ],
   providers: [
     SampleServiceService

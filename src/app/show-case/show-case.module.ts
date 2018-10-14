@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShowcaseRoutingModule } from './showcase.routing';
-
-import { MainCaseComponent } from './main-case/main-case.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     ShowcaseRoutingModule
   ],
   declarations: []
