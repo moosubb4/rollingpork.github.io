@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResumeRoutingModule } from './resume.routing';
-import { MainPagesComponent } from './main-pages/main-pages.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     ResumeRoutingModule
   ],
-  declarations: [MainPagesComponent]
+  declarations: []
 })
 export class ResumeModule { }
