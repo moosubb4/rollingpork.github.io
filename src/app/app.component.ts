@@ -8,3 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'myPortfolio';
 }
+
+/*
+ng build --prod --base-href "https://moosubb4.github.io/rollingpork.github.io/"
+ngh --dir "dist/moosubb"
+*/
