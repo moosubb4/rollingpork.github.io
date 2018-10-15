@@ -18,6 +18,12 @@ import { ResumeRoutingModule } from './resume/resume.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+library.add(faCoffee, faCloud, faGithub, faFacebook);
+
 
 
 @NgModule({
@@ -35,7 +41,8 @@ import { SharedModule } from './shared/shared.module';
     ResumeRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ],
   providers: [
     SampleServiceService

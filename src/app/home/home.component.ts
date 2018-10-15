@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public personalData = { birthDate: '4/4/1995' };
+
+
   constructor() { }
 
   ngOnInit() {
-   
   }
 
 }

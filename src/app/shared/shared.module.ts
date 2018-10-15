@@ -7,8 +7,10 @@ import { HeaderComponent } from './header/header.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-library.add(fas);
+import { faHome, faFolder, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+library.add(faHome, faFolder, faFile);
+
 
 
 

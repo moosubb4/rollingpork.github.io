@@ -4,20 +4,24 @@
     <ul>
       <li><a routerLink="/showcase">
           <span class="icon is-small">
-            <i class="fas fa-home"
-               aria-hidden="true"></i>
-          </span>showCase
+            <fa-icon [icon]="['fas', 'folder']"
+                     size="xs"></fa-icon>
+          </span> showCase
         </a></li>
       <li><a routerLink="/resume">
           <span class="icon is-small">
-            <i class="fas fa-book"
-               aria-hidden="true"></i>
-          </span>resume
+            <fa-icon [icon]="['fas', 'file']"
+                     size="xs"></fa-icon>
+          </span> resume
         </a></li>
+
       <li><a routerLink="/home">
-          <i class="fas fa-brain"></i>
-          Home
+          <span class="icon is-small">
+            <fa-icon [icon]="['fas', 'home']"
+                     size="xs"></fa-icon>
+          </span> Home
         </a></li>
+
     </ul>
   </nav>
 </div>
