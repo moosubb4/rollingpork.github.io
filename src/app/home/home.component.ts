@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonalData } from '../models/personaldata';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  public personalData = { birthDate: '4/4/1995' };
+  public personalData: PersonalData = {
+    name: 'Thanathorn',
+    surname: 'Kelatimongkolkul',
+    birthDate: '04/04/1995',
+    age: 23,
+    Personality: ['Friendly', 'Responsible'],
+    Religion: 'Buddhist',
+    Nationality: 'Thai',
+    Height: 169,
+    weight: 100,
+    Language: [
+      { Language: 'Thai', level: 'Native' },
+      { Language: 'English', level: 'Intermediate' }
+    ],
+    contact: {
+      tel: '0875571721',
+      email: 'rollingpork@gmail.com'
+    },
+    pic: './assets/img/mecongrat.jpg'
+  };
 
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
+

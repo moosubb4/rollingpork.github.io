@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+._fontSrisakdi {
+    font-family: 'Srisakdi', cursive;
+}
+
+._fontOpensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+._fontAnton {
+    font-family: 'Anton', sans-serif;
+}

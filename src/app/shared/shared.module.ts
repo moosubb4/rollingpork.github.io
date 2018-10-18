@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome, faFolder, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { AgePipe } from './pipes/age.pipe';
 library.add(faHome, faFolder, faFile);
 
 
@@ -21,8 +22,11 @@ library.add(faHome, faFolder, faFile);
     RouterModule,
     FontAwesomeModule
   ],
-  declarations: [HeaderComponent],
-  exports: [HeaderComponent]
+  declarations: [HeaderComponent, AgePipe],
+  exports: [
+    HeaderComponent,
+    AgePipe
+  ]
 
 })
 export class SharedModule { }

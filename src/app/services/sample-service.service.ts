@@ -11,6 +11,6 @@ export class SampleServiceService {
 
   getBNKdata() {
     return this._httpCli
-      .get('/assets/json/bnk.json');
+      .get('./assets/json/bnk.json');
   }
 }
