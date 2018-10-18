@@ -6,7 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myPortfolio';
+
+  public titleHeader;
+
+  constructor() { }
+
+  componentAdded(event) {
+    if (event.title) {
+      this.titleHeader = event.title;
+    }
+  }
+
 }
 
 /*

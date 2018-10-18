@@ -1,4 +1,4 @@
 <!-- <div class="container app-root"> -->
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header [title]="titleHeader"></app-header>
+<router-outlet (activate)="componentAdded($event)"></router-outlet>
 <!-- </div> -->

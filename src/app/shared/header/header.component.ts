@@ -1,5 +1,6 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '../../models/shared';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,16 +8,19 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit, OnChanges {
 
-  public isActive: boolean;
+  @Input() title: Title;
 
   constructor(private _router: Router) {
-    this.isActive = false;
+    // this.isActive = false;
   }
 
   ngOnInit() {
   }
 
-  ngOnChanges() {
+  ngOnChanges(changes: SimpleChanges) {
+    // if (changes.title) {
+    //   console.log(this.title);
+    // }
   }
 
   /*

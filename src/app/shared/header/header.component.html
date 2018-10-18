@@ -56,26 +56,31 @@
              class="navbar-menu">
           <div class="navbar-end">
             <a class="navbar-item"
-               [ngClass]="{'is-active':true}"
-               routerLink="/home">
+               routerLink="/home"
+               [routerLinkActive]="['is-active']"
+               [routerLinkActiveOptions]="{exact:true}">
               <span class="icon is-medium">
                 <fa-icon [icon]="['fas', 'home']"
                          size="xs"></fa-icon>
               </span> Home
             </a>
-            <a class="navbar-item"
-               routerLink="/resume">
+            <!-- <a class="navbar-item"
+               routerLink="/resume"
+               [routerLinkActive]="['is-active']"
+               [routerLinkActiveOptions]="{exact:true}">
               <span class="icon is-medium">
                 <fa-icon [icon]="['fas', 'file']"
                          size="xs"></fa-icon>
-              </span> About Me
-            </a>
+              </span> Resume
+            </a> -->
             <a class="navbar-item"
-               routerLink="/showcase">
+               routerLink="/showcase"
+               [routerLinkActive]="['is-active']"
+               [routerLinkActiveOptions]="{exact:true}">
               <span class="icon is-medium">
                 <fa-icon [icon]="['fas', 'folder']"
                          size="xs"></fa-icon>
-              </span> showCase
+              </span> Show Case
             </a>
             <!-- <span class="navbar-item">
               <a class="button is-primary is-inverted">
@@ -93,12 +98,12 @@
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
-    <div class="container has-text-centered">
+    <div *ngIf="title" class="container has-text-centered">
       <h1 class="title">
-        Title
+        {{title.title}}
       </h1>
       <h2 class="subtitle">
-        Subtitle
+          {{title.subTitle}}
       </h2>
     </div>
   </div>
