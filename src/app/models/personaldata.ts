@@ -8,6 +8,12 @@ export interface Contact {
     email: string;
 }
 
+export interface Pic {
+    path: string;
+    width?: number;
+    cropping?: number[];
+}
+
 export interface PersonalData {
     name: string;
     surname: string;
@@ -20,7 +26,7 @@ export interface PersonalData {
     weight: number;
     Language: Language[];
     contact: Contact;
-    pic: string;
+    pic: Pic;
 }
 
 

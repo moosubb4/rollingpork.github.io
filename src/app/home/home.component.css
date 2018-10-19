@@ -6,8 +6,31 @@
     color: white;
 } */
 
-.pic-me {
+/* .pic-me {
     height: 235px;
     width: 187px;
     border-radius: 50%;
+} */
+
+.round {
+    /* height: 235px; */
+    width: 50%;
+    border-radius: 50%;
+}
+
+.pic-me>figure {
+    /* width: 300px; */
+    /*container-width*/
+    overflow: hidden;
+    /*hide bounds of image */
+    margin: 0;
+    /*reset margin of figure tag*/
+}
+
+.pic-me>figure img {
+    display: block;
+    /*remove inline-block spaces*/
+    width: 100%;
+    /*make image streatch*/
+    /* margin: -10% 0% 0% 14%; */
 }

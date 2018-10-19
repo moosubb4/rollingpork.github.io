@@ -1,0 +1,29 @@
+.setArmor {
+    /*container*/
+    display: inline-flex;
+    border: solid black;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.setArmor>.piece {
+    /*item*/
+    order: 0;
+    border: solid red;
+    margin: 0 3px;
+    flex-basis: auto;
+}
+
+.setArmor>.piece>img {
+    border: solid blue;
+    display: block;
+    width: 150px;
+    margin: 1px auto 1px auto;
+}
+
+.setArmor>.piece>figcaption {
+    border: solid green;
+    text-align: center;
+    padding: 2px;
+}

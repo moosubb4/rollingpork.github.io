@@ -35,7 +35,16 @@
   </nav>
 </div> -->
 
-<section class="hero is-primary is-medium">
+<section class="hero is-danger is-bold">
+  <div class="hero-header">
+    <div class="container">
+      <h5 class="subtitle">
+        Profile v1.0
+      </h5>
+    </div>
+  </div>
+</section>
+<section class="hero is-primary is-bold is-medium">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <nav class="navbar">
@@ -98,12 +107,13 @@
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
-    <div *ngIf="title" class="container has-text-centered">
+    <div *ngIf="title"
+         class="container has-text-centered">
       <h1 class="title">
         {{title.title}}
       </h1>
       <h2 class="subtitle">
-          {{title.subTitle}}
+        {{title.subTitle}}
       </h2>
     </div>
   </div>

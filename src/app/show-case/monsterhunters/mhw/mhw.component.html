@@ -1,0 +1,18 @@
+<div class="container">
+  <div>
+    <div *ngFor="let item of setHunters">
+      <p>{{item.name}} : </p>
+      <div class="setArmor">
+        <figure class="piece"
+                *ngFor="let p of item.pieces">
+          <figcaption><b>{{p.name}}</b></figcaption>
+          <img src="{{p.assets.imageFemale}}"
+               alt="{{p.name}}Female">
+          <img src="{{p.assets.imageMale}}"
+               alt="{{p.name}}Male">
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</div>

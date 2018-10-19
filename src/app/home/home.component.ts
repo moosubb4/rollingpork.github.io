@@ -17,9 +17,7 @@ export class HomeComponent implements OnInit {
     subTitle: 'home page'
   };
 
-
   constructor() {
-
     this.personalData = {
       name: 'Thanathorn',
       surname: 'Kelatimongkolkul',
@@ -38,14 +36,20 @@ export class HomeComponent implements OnInit {
         tel: '0875571721',
         email: 'rollingpork@gmail.com'
       },
-      pic: './assets/img/mecongrat.jpg'
+      pic: {
+        path: './assets/img/me2.png',
+        width: 300,
+        cropping: [-10, 0, 0, 14]
+      }
     };
 
   }
 
   ngOnInit() {
-
+    // console.log('personalData', JSON.stringify(this.personalData));
   }
+
+
 
 }
 

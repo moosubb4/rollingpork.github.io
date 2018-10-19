@@ -43,9 +43,17 @@
           <p><b>Contact</b> : Tel (+66)875571721</p>
           <p><b>Email</b> : rollingpork@gmail.com</p> -->
 
-          <img class="pic-me"
-               src="{{personalData.pic}}"
-               alt="Me">
+          <!-- <img class=""
+               src="{{personalData.pic.path}}"
+               alt="Me"> -->
+
+          <figure class="image">
+            <img class="round"
+                 src="{{personalData.pic.path}}"
+                 alt="MyPic">
+          </figure>
+
+          <!--[ngStyle]="{'margin': '-10% 0% 0% 14%'}" [ngStyle]="{'width': '300px'}"F-->
 
           <p class="_fontAnton is-size-1 has-text-success has-text-weight-semibold">
             <!--_fontSrisakdi-->
@@ -56,7 +64,7 @@
           <p><b>Personality</b> : {{personalData.Personality}}</p>
           <p><b>Nationality</b> : {{personalData.Nationality}}</p>
           <p><b>Religion</b> : {{personalData.Religion}}</p>
-          <p><b>Language</b> : 
+          <p><b>Language</b> :
             {{personalData.Language[0].Language}} ({{personalData.Language[0].level}}),
             {{personalData.Language[1].Language}} ({{personalData.Language[1].level}})
           </p>
