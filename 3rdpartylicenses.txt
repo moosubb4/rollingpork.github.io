@@ -394,10 +394,6 @@ MIT
 MIT
 MIT
 
-@angular/http@6.1.9
-MIT
-MIT
-
 @angular/router@6.1.9
 MIT
 MIT
