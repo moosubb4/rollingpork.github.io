@@ -1,3 +1,15 @@
+.setArmorBox {
+    /*container*/
+    /* display: flex; */
+    border: solid yellowgreen;
+}
+
+.setArmorBox>.setArmorItem {
+    /*item*/
+    /* order: 0; */
+    border: solid rgb(187, 50, 205);
+}
+
 .setArmor {
     /*container*/
     display: inline-flex;
