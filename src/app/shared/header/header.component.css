@@ -3,5 +3,6 @@
 }
 
 .bg-gif-cat {
-    background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif')
+    background-image: url('/assets/img/wigglecat.gif');
+    background-size: contain;
 }
