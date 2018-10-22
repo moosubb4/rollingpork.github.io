@@ -59,15 +59,15 @@ export interface DislikeSchoolSubjects {
 }
 
 export interface Bio {
-    food_allergies: FoodAllergies;
-    favourite_foods: FavouriteFoods;
-    dislike_foods: DislikeFoods;
-    favourite_games: FavouriteGames;
-    likes: Likes;
-    dislikes: Dislikes;
-    hobbies: Hobbies;
-    favourite_school_subjects: FavouriteSchoolSubjects;
-    dislike_school_subjects: DislikeSchoolSubjects;
+    food_allergies?: FoodAllergies;
+    favourite_foods?: FavouriteFoods;
+    dislike_foods?: DislikeFoods;
+    favourite_games?: FavouriteGames;
+    likes?: Likes;
+    dislikes?: Dislikes;
+    hobbies?: Hobbies;
+    favourite_school_subjects?: FavouriteSchoolSubjects;
+    dislike_school_subjects?: DislikeSchoolSubjects;
 }
 
 export interface Member {

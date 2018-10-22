@@ -6,17 +6,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SampleServiceService {
 
-  private starWarsUrl = 'https://swapi.co/api';
+  private assetsJson = './assets/json';
+  private jsonPlaceholder = 'https://jsonplaceholder.typicode.com';
+  private bnk48 = 'https://www.api.bnk48.com/api';
 
   constructor(private _httpCli: HttpClient) { }
 
   getBNKdata() {
-    return this._httpCli
-      .get('./assets/json/bnk.json');
+    const url = `${this.assetsJson}/bnk.json`;
+    // const url = `${this.bnk48}/members`;
+    return this._httpCli.get(url);
   }
 
-  getStwFilms(ep: number) {
-    const url = `${this.starWarsUrl}/films/${ep}`;
+  getPlacholderPhotos() {
+    const url = `${this.jsonPlaceholder}/photos`;
     return this._httpCli.get(url);
   }
 

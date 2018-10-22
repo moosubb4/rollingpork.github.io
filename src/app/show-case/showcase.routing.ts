@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MainCaseComponent } from './main-case/main-case.component';
 import { MhwComponent } from './monsterhunters/mhw/mhw.component';
-import { FilmsComponent } from './starwars/films/films.component';
 
 const appRoutesShowcase: Routes = [
   {
@@ -16,6 +15,6 @@ const appRoutesShowcase: Routes = [
     CommonModule,
     RouterModule.forChild(appRoutesShowcase)],
   exports: [RouterModule],
-  declarations: [MainCaseComponent, MhwComponent, FilmsComponent]
+  declarations: [MainCaseComponent, MhwComponent]
 })
 export class ShowcaseRoutingModule { }
