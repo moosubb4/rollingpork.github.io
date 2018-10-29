@@ -3,11 +3,12 @@
     /* border: solid black; */    
     flex-flow: row wrap;
     justify-content: center;
+    /* padding: 0 40px; */
 }
 
 .case-container::after {
     content: "";
-    flex: 1 0 auto;
+    flex: auto; 
 }
 
 .case-container>.case-item {
@@ -45,7 +46,7 @@
     position: absolute;
     width: 100%;
     top: 100%;
-    margin-top: -48px;
+    margin-top: -55px;
     padding: 0px 10px;
 }
 

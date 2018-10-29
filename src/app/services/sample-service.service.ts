@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BNK48 } from '../models/bnk48Member';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class SampleServiceService {
 
   getPlacholderPhotos() {
     const url = `${this.jsonPlaceholder}/photos`;
-    return this._httpCli.get(url);
+    return this._httpCli.get<BNK48>(url);
   }
 
 }
