@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonalData } from '../models/personaldata';
 import { Title } from '../models/shared';
+import { SampleServiceService } from '../services/sample-service.service';
+import { tap } from 'rxjs/operators';
 
 
 
@@ -12,12 +14,14 @@ import { Title } from '../models/shared';
 export class HomeComponent implements OnInit {
 
   public personalData: PersonalData;
+  public msg: string;
+  public hiddenLab: boolean;
   public title: Title = {
     title: 'Home',
     subTitle: 'home page'
   };
 
-  constructor() {
+  constructor(private _simple: SampleServiceService) {
     this.personalData = {
       name: 'Thanathorn',
       surname: 'Kelatimongkolkul',
@@ -43,10 +47,24 @@ export class HomeComponent implements OnInit {
       }
     };
 
+    this.hiddenLab = false;
+
   }
 
   ngOnInit() {
     // console.log('personalData', JSON.stringify(this.personalData));
+  }
+
+  sendLine() {
+    this._simple.getLineOauthen().subscribe(e => console.log('getLineOauthen', e));
+    
+    if (this.msg) {
+      this._simple.sendLineMassages(this.msg)
+        .pipe(
+          tap(e => console.log('sendLineMassages', e))
+        )
+        .subscribe();
+    }
   }
 
 

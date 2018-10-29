@@ -56,7 +56,6 @@
           <!--[ngStyle]="{'margin': '-10% 0% 0% 14%'}" [ngStyle]="{'width': '300px'}"F-->
 
           <p class="_fontOpensans is-size-1 has-text-dark has-text-weight-semibold">
-            <!--_fontSrisakdi-->
             {{personalData.name}} {{personalData.surname}}
           </p>
           <p><b>Date of birth</b> : {{personalData.birthDate | date:'d MMMM y'}}</p>
@@ -74,8 +73,17 @@
 
         </div>
       </div>
+      <h3 (dblclick)="hiddenLab = !hiddenLab">**Hidden Lab</h3>
+      <div *ngIf="hiddenLab">
+        <span>Line=> <input type="text"
+                 [(ngModel)]="msg"></span>
+        <button class="button is-success"
+                (click)="sendLine()">Line!</button>
+      </div>
     </div>
   </div>
+
+
 
   <!-- <div class="is-pulled-left ">
         <p>test1</p>
