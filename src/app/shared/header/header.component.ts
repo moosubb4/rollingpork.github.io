@@ -9,9 +9,11 @@ import { Title } from '../../models/shared';
 export class HeaderComponent implements OnInit, OnChanges {
 
   @Input() title: Title;
+  public hamburgerToggle: boolean;
 
   constructor(private _router: Router) {
     // this.isActive = false;
+    this.hamburgerToggle = false;
   }
 
   ngOnInit() {
