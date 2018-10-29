@@ -24,7 +24,7 @@ export class SampleServiceService {
   private endPoint = 'https://notify-bot.line.me';
   private client_id = 'HNAB6HJx5A0OxuKxprYTIP';
   private client_secret = 'N1saQHxRzClUCz9XyvRLEpGV2ieJxLzGmOUAGk3ZYrW';
-  private redirect_url = 'https://moosubb4.github.io/rollingpork.github.io/home';  // 'http://localhost:4200/home';
+  private redirect_url = 'http://localhost:4200/home'; // 'https://moosubb4.github.io/rollingpork.github.io/home';  ;
 
   constructor(private _httpCli: HttpClient) { }
 
@@ -55,14 +55,19 @@ export class SampleServiceService {
       'scope': 'notify',
       'state': this.idGenerators()
     };
-    // const headers = new HttpHeaders({
-    //   'Access-Control-Allow-Origin': 'http://localhost:4200'
-    // });
     const options = { params: params };
 
-    console.log('getLineOauthen\nurl', url, '\noptions', options);
-
     return this._httpCli.get(url, options);
+
+    const fullUrl = `${this.endPoint
+      }/oauth/authorize?response_type=code&client_id=${this.client_id
+      }&redirect_uri=${this.redirect_url
+      }&scope=notify&state=${this.idGenerators()}`;
+
+    // return fullUrl;
+
+    // console.log('getLineOauthen\nurl', url, '\noptions', options);
+
   }
 
   getLineAccessToken(authCode: string) { // step 2 get access token
