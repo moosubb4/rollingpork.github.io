@@ -54,15 +54,27 @@
             <img src="https://bulma.io/images/bulma-type-white.png"
                  alt="Logo">
           </a>
-          <span class="navbar-burger burger"
+          <!-- <span class="navbar-burger burger"
                 data-target="navbarMenuHeroA">
             <span></span>
             <span></span>
             <span></span>
+          </span> -->
+          <span role="button"
+                (click)="hamburgerToggle = !hamburgerToggle"
+                class="navbar-burger burger is-active"
+                [ngClass]="{'is-active':hamburgerToggle}"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbarMenuHeroA">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </span>
         </div>
         <div id="navbarMenuHeroA"
-             class="navbar-menu">
+             class="navbar-menu"
+             [ngClass]="{'is-active':hamburgerToggle}">
           <div class="navbar-end">
             <a class="navbar-item"
                routerLink="/home"
