@@ -120,6 +120,10 @@ trademarks does not indicate endorsement of the trademark holder by Font
 Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
+@angular/common@6.1.9
+MIT
+MIT
+
 tslib@1.9.3
 Apache-2.0
 Apache License
@@ -382,15 +386,11 @@ Apache License
  See the License for the specific language governing permissions and
  limitations under the License.
 
-@angular/common@6.1.9
+@angular/platform-browser@6.1.9
 MIT
 MIT
 
 @fortawesome/angular-fontawesome@0.2.1
-MIT
-MIT
-
-@angular/platform-browser@6.1.9
 MIT
 MIT
 
