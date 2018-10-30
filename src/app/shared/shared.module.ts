@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './header/header.component';
+import { ShowtimelineComponent } from './components/showtimeline/showtimeline.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -22,9 +23,13 @@ library.add(faHome, faFolder, faFile);
     RouterModule,
     FontAwesomeModule
   ],
-  declarations: [HeaderComponent, AgePipe],
+  declarations: [
+    HeaderComponent,
+    ShowtimelineComponent,
+    AgePipe],
   exports: [
     HeaderComponent,
+    ShowtimelineComponent,
     AgePipe
   ]
 
