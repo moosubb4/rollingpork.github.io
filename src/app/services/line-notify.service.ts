@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BNK48 } from '../models/bnk48Member';
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
-// import { JSO, Popup } from 'jso';
 
 export interface LineMassage {
   message: string; // ข้อความไม่เกิน 1,000 ตัวอักษร (Required)
@@ -15,11 +13,7 @@ export interface LineMassage {
 @Injectable({
   providedIn: 'root'
 })
-export class SampleServiceService {
-
-  private assetsJson = './assets/json';
-  private jsonPlaceholder = 'https://jsonplaceholder.typicode.com';
-  private bnk48 = 'https://www.api.bnk48.com/api';
+export class LineNotifyService {
 
   private endPoint = 'https://notify-bot.line.me';
   private client_id = 'HNAB6HJx5A0OxuKxprYTIP';
@@ -29,55 +23,44 @@ export class SampleServiceService {
 
   constructor(private _httpCli: HttpClient) { }
 
-  getBNKdata() {
-    const url = `${this.assetsJson}/bnk.json`;
-    // const url = `${this.bnk48}/members`;
-    return this._httpCli.get(url);
+  getAuthCode() {
+    const url = `${this.endPoint}/oauth/authorize`;
+    const stateCode = this.idGenerators();
+    const params = {
+      'response_type': 'code',
+      'client_id': this.client_id,
+      'redirect_uri': this.redirect_url,
+      'scope': 'notify',
+      'state': stateCode
+    };
+
+    if (stateCode) {
+      localStorage.setItem('state', stateCode);
+    }
+
+
+    return url + '?' + this.toQueryString(params);
   }
 
-  getPlacholderPhotos() {
-    const url = `${this.jsonPlaceholder}/photos`;
-    return this._httpCli.get<BNK48>(url);
-  }
-
-
-  // getOauth() {
-  //   const config = {};
-  //   const j = new JSO(config);
-  // }
-
-
-  getLineOauthen() { // Step 1 get auth code
-    // const url = `${this.endPoint}/oauth/authorize`;
-    // const params = {
-    //   'response_type': 'code',
-    //   'client_id': this.client_id,
-    //   'redirect_uri': this.redirect_url,
-    //   'scope': 'notify',
-    //   'state': this.idGenerators()
-    // };
-    // const options = { params: params };
-
-    // return this._httpCli.get(url, options);
-
-    const fullUrl = `${this.endPoint
-      }/oauth/authorize?response_type=code&client_id=${this.client_id
-      }&redirect_uri=${this.redirect_url
-      }&scope=notify&state=${this.idGenerators()}`;
-
-    return fullUrl;
-
-    // console.log('getLineOauthen\nurl', url, '\noptions', options);
-
+  getQueryAuthCode() {
+    const stateCode = localStorage.getItem('state');
+    const urlParams = new URLSearchParams(window.location.search);
+    // console.log('getQueryAuthCode', urlParams.toString());
+    if (urlParams.get('state') === stateCode) {
+      localStorage.removeItem('state');
+      return urlParams.get('code');
+    }
+    return null;
   }
 
   getLineAccessToken(authCode: string) { // step 2 get access token
     const url = `${this.endPoint}/oauth/token`;
+
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded'
     });
 
-    const body = {
+    const params = {
       grant_type: 'authorization_code',
       code: authCode, // from getLineOauthen()
       redirect_uri: this.redirect_url,
@@ -87,32 +70,36 @@ export class SampleServiceService {
 
     const options = {
       headers: headers,
-      params: body
+      // params: params
     };
 
-    console.log('getLineAccessToken\nurl', url, '\nbody', body, '\noptions', options);
+    return url + '?' + this.toQueryString(params);
 
-    // this._httpCli.request
-
-    return this._httpCli.post(url, '', options);
-
+    // return this._httpCli.post(url + '?' + this.toQueryString(params), null, options);
   }
 
-  sendLineMassages(msg: string, token: string = 'XWlckRsu0VufPBDU8bVw7I0lLaugXinJQYhCkyI6HHL') { // step 3 sending massages
-    const url = `${this.endPoint}/api/notify`;
+  sendLineMassages(msg: string, token: string = 'VO0DXJQutTne1DfdBGG0ZFBUvLcw0zBbMsuXm7IHtlB') { // step 3 sending massages
+    const url = `https://notify-api.line.me/api/notify`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded', // หรือถ้าต้องการอัพโหลดภาพให้ใช้ multipart/form-data
       'Authorization': `Bearer ${token}`,
     });
-    const options = { headers: headers };
-    const body: LineMassage = {
+
+    const body = {
       message: msg
     };
 
+    const options = {
+      headers: headers
+    };
     // console.log('sendLineMassages\nurl', url, '\noptions', options);
 
-    return this._httpCli.post(url, body, options);
+    return this._httpCli.post(url + '?' + this.toQueryString(body), null, options);
   }
+
+
+
+  // ========Helper=======
 
   idGenerators(number: number = 10): string {
     let text = '';
@@ -121,6 +108,10 @@ export class SampleServiceService {
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
     return text;
+  }
+
+  toQueryString(params): string {
+    return Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
   }
 
 }

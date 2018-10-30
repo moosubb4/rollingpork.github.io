@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
 import { SampleServiceService } from './services/sample-service.service';
+import { LineNotifyService } from './services/line-notify.service';
+
 
 import { HomeComponent } from './home/home.component';
 
@@ -47,7 +49,8 @@ library.add(faCoffee, faCloud, faGithub, faFacebook);
     FontAwesomeModule
   ],
   providers: [
-    SampleServiceService
+    SampleServiceService,
+    LineNotifyService
   ],
   bootstrap: [AppComponent]
 })

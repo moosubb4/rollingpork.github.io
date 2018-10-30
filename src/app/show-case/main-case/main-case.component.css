@@ -1,6 +1,6 @@
 .case-container {
     display: flex;
-    /* border: solid black; */    
+    /* border: solid black; */
     flex-flow: row wrap;
     justify-content: center;
     /* padding: 0 40px; */
@@ -8,7 +8,7 @@
 
 .case-container::after {
     content: "";
-    flex: auto; 
+    flex: auto;
 }
 
 .case-container>.case-item {
@@ -58,4 +58,16 @@ label>.item-name {
 label>.item-date {
     font-size: 1rem;
     text-align: right;
+}
+
+.line {
+    display: inline-block;
+    padding: 10px;
+    margin: 50px auto;
+}
+
+ span {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
 }

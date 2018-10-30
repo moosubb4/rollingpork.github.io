@@ -75,47 +75,74 @@
   <hr>
 </div> -->
 
-<div class="container is-fluid" style="background-color: rgba(255, 225, 235, 0.966)">
+<nav class="breadcrumb has-succeeds-separator"
+     aria-label="breadcrumbs">
+  <ul>
+    <li [ngClass]="{'is-active' : ontab==='bnk'}"><a (click)="ontab='bnk'">BNK48 members</a></li>
+    <li [ngClass]="{'is-active' : ontab==='line'}"><a (click)="ontab='line'">Line Notify</a></li>
+    <li class="is-active"><a href="#"
+         aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
 
-  <section class="hero is-light is-bold">
-    <div class="hero-header">
-      <div class="container">
-        <h2>credit : https://www.bnk48.com/</h2>
-      </div>
-    </div>
-  </section>
+<div class="container">
+  <div *ngIf="ontab==='bnk'"
+       class="container is-fluid"
+       style="background-color: rgba(255, 225, 235, 0.966)">
 
-  <a class="button is-hovered"
-     (click)="onBorder = !onBorder"
-     [ngClass]="{'is-danger': onBorder,'is-light': !onBorder}">
-    Border
-  </a>
-
-
-  <!-- <app-mhw></app-mhw> -->
-  <!-- <app-films></app-films> -->
-  <div class="case-container"
-       [ngStyle]="{'border': onBorder?'solid black':''}">
-
-    <div class="case-item"
-         [ngStyle]="{'border': onBorder?'solid red':''}"
-         *ngFor="let item of members;let i = index">
-
-      <div class="img-container"
-           [ngStyle]="{'border': onBorder?'solid black':''}">
-        <div class="img-item"
-             [ngStyle]="{'border': onBorder?'solid rgb(251, 255, 0)':''}">
-          <img [src]="item.avatar_image"
-               [alt]="item.slug">
+    <section class="hero is-light is-bold">
+      <div class="hero-header">
+        <div class="container">
+          <h2>credit : https://www.bnk48.com/</h2>
         </div>
-        <label class="img-item-label"
-               [ngStyle]="{'border': onBorder?'solid rgb(35, 255, 0)':''}">
-          <p class="item-name">{{item.nickname.en}}</p>
-          <p class="item-date">{{item.birth_date | date:'d MMM yyyy'}}</p>
-        </label>
       </div>
+    </section>
 
+    <a class="button is-hovered"
+       (click)="onBorder = !onBorder"
+       [ngClass]="{'is-danger': onBorder,'is-light': !onBorder}">
+      Border
+    </a>
+
+    <div class="case-container"
+         [ngStyle]="{'border': onBorder?'solid black':''}">
+      <div class="case-item"
+           [ngStyle]="{'border': onBorder?'solid red':''}"
+           *ngFor="let item of members;let i = index">
+        <div class="img-container"
+             [ngStyle]="{'border': onBorder?'solid black':''}">
+          <div class="img-item"
+               [ngStyle]="{'border': onBorder?'solid rgb(251, 255, 0)':''}">
+            <img [src]="item.avatar_image"
+                 [alt]="item.slug">
+          </div>
+          <label class="img-item-label"
+                 [ngStyle]="{'border': onBorder?'solid rgb(35, 255, 0)':''}">
+            <p class="item-name">{{item.nickname.en}}</p>
+            <p class="item-date">{{item.birth_date | date:'d MMM yyyy'}}</p>
+          </label>
+        </div>
+      </div>
     </div>
 
-  </div> 
+  </div>
+
+  <div *ngIf="ontab==='line'"
+       class="container is-fluid line">
+    <span>
+      <label for="msg">Massages:</label>
+      <input type="text"
+             [(ngModel)]="msg"
+             name="msg"
+             id="msg">
+    </span>
+    <span>
+      <button class="button is-light"
+              (click)="getAuth()">get Auth</button>
+      <button class="button is-warning"
+              (click)="getAccessToken()">get Accesstoken</button>
+      <button class="button is-success"
+              (click)="sendLine()">sendNude</button>
+    </span>
+  </div>
 </div>
