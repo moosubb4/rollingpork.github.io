@@ -1,0 +1,219 @@
+/*==========Text========*/
+
+.timeline-title {
+    text-align: center;
+    font-size: 35px;
+}
+
+/*verticle center line*/
+
+.timeline .timeline-menu .timeline-list {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #000000;
+    box-shadow: 4px 3px 6px grey;
+}
+
+/*verticle center pointer*/
+
+.timeline .timeline-menu .timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    /* width: 20px;
+    height: 20px; */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: inherit;
+    /* border: inset 7px #333;
+    background-color: #000000; */
+    border: double 7px #31babf;
+    background-color: #095556;
+    box-shadow: 4px 3px 6px grey;
+}
+
+/*textbox div*/
+
+/* .timeline .timeline-menu li div{
+    position: relative;
+    bottom: 7px;
+    width: 400px;
+    padding: 15px;
+    background: #F45B69;
+    box-shadow: 4px 3px 15px grey;
+    border-radius: 11px;
+  } */
+
+.timeline .timeline-menu .timeline-list .timelines-box-body {
+    position: relative;
+    bottom: 7px;
+    width: 400px;
+    padding: 15px;
+    background: #7cff7c;
+    box-shadow: 4px 3px 15px grey;
+    border-radius: 11px;
+}
+
+.timeline .timeline-menu .timeline-list .timelines-box-title {
+    position: relative;
+    top: 50%;
+    bottom: 7px;
+    width: 400px;
+    padding: 15px;
+    /* background: rgb(122, 244, 91); */
+    /* box-shadow: 4px 3px 15px grey; */
+    /* border-radius: 11px;                                                                                                                                                                     */
+}
+
+/*textbox pointer*/
+
+.timeline .timeline-menu .timeline-list .timelines-box-body::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/*textbox div*/
+
+/* .timeline ul .timeline-list:nth-child(odd) div time {
+    color: rgb(14, 18, 223);
+    margin-right: 20px;
+    .timeline-listne-height: inherit;
+  } */
+
+/*textbox div*/
+
+/* .timeline ul .timeline-list:nth-child(even) div time {
+    color: white;
+    margin-right: 20px;
+    .timeline-listne-height: inherit;
+  } */
+
+/* odd box style */
+
+.timeline .timeline-menu .timeline-list:nth-child(odd) .timelines-box-title {
+    left: -439px;
+    top: 50px;
+    text-align: right;
+    font-size: 25px;
+    line-height: inherit;
+}
+
+.timeline .timeline-menu .timeline-list:nth-child(odd) .timelines-box-body {
+    left: 45px;
+}
+
+.timelines-box-body>p:first-child {
+    /* padding: 0 5px 0 5px; */
+    border-bottom: solid 2px;
+}
+
+.timeline .timeline-menu .timeline-list:nth-child(odd) .timelines-box-body::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #7cff7c transparent transparent;
+}
+
+/* even box style */
+
+.timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-title {
+    left: 45px;
+    top: 50px;
+    font-size: 25px;
+    line-height: inherit;
+}
+
+.timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-body {
+    left: -439px;
+}
+
+.timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-body::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #7cff7c;
+}
+
+/*  responsive  */
+
+@media screen and (max-width: 900px) {
+    .timeline .timeline-menu .timeline-list .timelines-box-title {
+        /* left: 45px; */
+        /* top: 50px; */
+        font-size: 25px;
+        line-height: inherit;
+    }
+    .timeline .timeline-menu .timeline-list:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline .timeline-menu .timeline-list {
+        margin-left: 20px;
+    }
+    .timeline .timeline-menu .timeline-list div {
+        width: calc(100vw - 91px);
+    }
+    .timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-body {
+        left: 45px;
+    }
+    .timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-title {
+        left: 45px;
+        top: 0;
+    }
+    .timeline .timeline-menu .timeline-list:nth-child(odd) .timelines-box-title {
+        left: 45px;
+        top: 0;
+        text-align: left;
+    }
+    .timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-body::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #7cff7c transparent transparent;
+    }
+}
+
+/* ================== Neon ================== */
+
+.neon {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 70px;
+    color: #fff;
+    text-shadow: 0px 0px 20px #ff005b;
+}
+
+.neon::after {
+    content: attr(data-text);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #ff005b;
+}
+
+.neon::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #31babf;
+    z-index: -2;
+    opacity: 0.5;
+    filter: blur(40px);
+}

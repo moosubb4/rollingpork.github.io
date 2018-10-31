@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { ShowtimelineComponent } from './components/showtimeline/showtimeline.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -26,9 +27,11 @@ library.add(faHome, faFolder, faFile);
   declarations: [
     HeaderComponent,
     ShowtimelineComponent,
-    AgePipe],
+    AgePipe,
+    FooterComponent],
   exports: [
     HeaderComponent,
+    FooterComponent,
     ShowtimelineComponent,
     AgePipe
   ]

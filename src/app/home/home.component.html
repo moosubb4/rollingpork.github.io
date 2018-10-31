@@ -17,7 +17,7 @@
 
   <div class="section main">
     <div class="container">
-      <div class="columns has-text-centered">
+      <div class="columns">
         <div class="column is-half is-offset-one-fifth">
           <!-- <figure class="image is-128x128"
                   style="justify-content: center;">
@@ -47,15 +47,15 @@
                src="{{personalData.pic.path}}"
                alt="Me"> -->
 
-          <figure class="images">
+          <!-- <figure class="images">
             <img class="round"
                  src="{{personalData.pic.path}}"
                  alt="MyPic">
-          </figure>
+          </figure> -->
 
           <!--[ngStyle]="{'margin': '-10% 0% 0% 14%'}" [ngStyle]="{'width': '300px'}"F-->
 
-          <p class="_fontOpensans is-size-1 has-text-dark has-text-weight-semibold">
+          <p class="has-text-dark has-text-weight-semibold">
             {{personalData.name}} {{personalData.surname}}
           </p>
           <p><b>Date of birth</b> : {{personalData.birthDate | date:'d MMMM y'}}</p>
@@ -75,7 +75,7 @@
       </div>
 
       <div>
-        <app-showtimeline></app-showtimeline>
+        <app-showtimeline [experience]="experiencesData"></app-showtimeline>
       </div>
 
       <!-- <button (click)="newWindow()">Open Windows</button> -->
@@ -110,22 +110,6 @@
     <fa-icon [icon]="faCoffee"></fa-icon>
   </div> -->
 
-      <div class="has-text-centered space">
-        <a class="icon is-large"
-           href="https://github.com/moosubb4/">
-          <fa-icon [icon]="['fab', 'github']"
-                   size="3x">
-          </fa-icon>
-        </a>
-
-        <a class="icon is-large"
-           href="https://www.facebook.com/mookaki">
-          <fa-icon [icon]="['fab', 'facebook']"
-                   size="3x">
-          </fa-icon>
-        </a>
-      </div>
-
       <!-- <div class="has-text-centered space">
     <a href="https://github.com/moosubb4/">
       <span class="icon is-medium">
@@ -135,6 +119,7 @@
         github.com/moosubb4
       </span>
     </a>
+    
 
     <a href="https://www.facebook.com/mookaki">
       <span class="icon is-medium">
@@ -145,6 +130,5 @@
       </span>
     </a>
   </div> -->
-
     </div>
     <!-- <div class="image"></div> -->

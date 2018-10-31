@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonalData } from '../models/personaldata';
+import { ExpData } from '../models/exp';
 import { Title } from '../models/shared';
 import { SampleServiceService } from '../services/sample-service.service';
 import { tap } from 'rxjs/operators';
@@ -15,6 +16,7 @@ import { tap } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
 
   public personalData: PersonalData;
+  public experiencesData: ExpData[] = [];
   public msg: string;
   public hiddenLab: boolean;
   public title: Title = {
@@ -23,9 +25,34 @@ export class HomeComponent implements OnInit {
   };
 
   constructor(private _simple: SampleServiceService) {
+    // this.personalData = {
+    //   name: 'Thanathorn',
+    //   surname: 'Kelatimongkolkul',
+    //   birthDate: '04/04/1995',
+    //   age: 23,
+    //   Personality: ['Friendly', 'Responsible'],
+    //   Religion: 'Buddhist',
+    //   Nationality: 'Thai',
+    //   Height: 169,
+    //   weight: 100,
+    //   Language: [
+    //     { Language: 'Thai', level: 'Native' },
+    //     { Language: 'English', level: 'Intermediate' }
+    //   ],
+    //   contact: {
+    //     tel: '0875571721',
+    //     email: 'rollingpork@gmail.com'
+    //   },
+    //   pic: {
+    //     path: './assets/img/me2.png',
+    //     width: 300,
+    //     cropping: [-10, 0, 0, 14]
+    //   }
+    // };
+
     this.personalData = {
-      name: 'Thanathorn',
-      surname: 'Kelatimongkolkul',
+      name: 'John',
+      surname: 'Ceena',
       birthDate: '04/04/1995',
       age: 23,
       Personality: ['Friendly', 'Responsible'],
@@ -47,6 +74,29 @@ export class HomeComponent implements OnInit {
         cropping: [-10, 0, 0, 14]
       }
     };
+
+    this.experiencesData = [
+      {
+        year: 2017,
+        until: 2020,
+        company: 'VotecIntermediate',
+        describe: 'Frontend Developer',
+        projects: [
+          {
+            projName: 'Kurumajiten',
+            projDescribe: 'Kurumajiten of Carbell company',
+            projTech: ['Angular v.4']
+          },
+          {
+            projName: 'CarStar',
+            projDescribe: 'CarStar of CarStarMate company',
+            projTech: ['Angular v.4']
+          }
+        ]
+      }
+    ];
+
+
 
     this.hiddenLab = false;
 

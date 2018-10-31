@@ -1,202 +1,46 @@
-<style>
-  /*==========Text========*/
-
-  .timeline-title {
-    text-align: center;
-    font-size: 35px;
-  }
-
-
-  /*verticle center line*/
-  .timeline ul li {
-    list-style-type: none;
-    position: relative;
-    width: 6px;
-    margin: 0 auto;
-    padding-top: 50px;
-    background: #000000;
-    box-shadow: 4px 3px 6px grey;
-  }
-
-  /*verticle center pointer*/
-  .timeline ul li::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    /* width: 20px;
-    height: 20px; */
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: inherit;
-    /* border: inset 7px #333;
-    background-color: #000000; */
-    border: double 7px #31babf;
-    background-color: #095556;
-    box-shadow: 4px 3px 6px grey;
-  }
-
-  /*textbox div*/
-  /* .timeline ul li div{
-    position: relative;
-    bottom: 7px;
-    width: 400px;
-    padding: 15px;
-    background: #F45B69;
-    box-shadow: 4px 3px 15px grey;
-    border-radius: 11px;
-  } */
-
-  .timeline ul li .timelines-box-body {
-    position: relative;
-    bottom: 7px;
-    width: 400px;
-    padding: 15px;
-    background: #F45B69;
-    box-shadow: 4px 3px 15px grey;
-    border-radius: 11px;
-  }
-
-  .timeline ul li .timelines-box-title {
-    position: relative;
-    top: 50%;
-    bottom: 7px;
-    width: 400px;
-    padding: 15px;
-    /* background: rgb(122, 244, 91); */
-    /* box-shadow: 4px 3px 15px grey; */
-    /* border-radius: 11px;                                                                                                                                                                     */
-  }
-
-  /*textbox pointer*/
-  .timeline ul li .timelines-box-body::before {
-    content: '';
-    position: absolute;
-    bottom: 7px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-  }
-
-  /*textbox div*/
-  /* .timeline ul li:nth-child(odd) div time {
-    color: rgb(14, 18, 223);
-    margin-right: 20px;
-    line-height: inherit;
-  } */
-
-  /*textbox div*/
-  /* .timeline ul li:nth-child(even) div time {
-    color: white;
-    margin-right: 20px;
-    line-height: inherit;
-  } */
-
-  /* odd box style */
-
-  .timeline ul li:nth-child(odd) .timelines-box-title {
-    left: -439px;
-    top: 50px;
-    text-align: right;
-    font-size: 25px;
-    line-height: inherit;
-  }
-
-  .timeline ul li:nth-child(odd) .timelines-box-body {
-    left: 45px;
-  }
-
-  .timeline ul li:nth-child(odd) .timelines-box-body::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
-  }
-
-  /* even box style */
-
-  .timeline ul li:nth-child(even) .timelines-box-title {
-    left: 45px;
-    top: 50px;
-    font-size: 25px;
-    line-height: inherit;
-  }
-
-  .timeline ul li:nth-child(even) .timelines-box-body {
-    left: -439px;
-  }
-
-
-  .timeline ul li:nth-child(even) .timelines-box-body::before {
-    right: -15px;
-    border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #F45B69;
-  }
-
-  /*  responsive  */
-  @media screen and (max-width: 900px) {
-
-    .timeline ul li .timelines-box-title {
-      /* left: 45px; */
-      /* top: 50px; */
-      font-size: 25px;
-      line-height: inherit;
-    }
-
-    .timeline ul li:nth-child(even) div {
-      left: -289px;
-      /*250+45-6*/
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-
-    .timeline ul li {
-      margin-left: 20px;
-    }
-
-    .timeline ul li div {
-      width: calc(100vw - 91px);
-    }
-
-    .timeline ul li:nth-child(even) .timelines-box-body {
-      left: 45px;
-    }
-
-    .timeline ul li:nth-child(even) .timelines-box-title {
-      left: 45px;
-      top: 0;
-    }
-
-    .timeline ul li:nth-child(odd) .timelines-box-title {
-      left: 45px;
-      top: 0;
-      text-align: left;
-    }
-
-    .timeline ul li:nth-child(even) .timelines-box-body::before {
-      left: -15px;
-      border-width: 8px 16px 8px 0;
-      border-color: transparent #F45B69 transparent transparent;
-    }
-  }
-
-</style>
-
 <div class="_fontAnton">
 
-  <div class="timeline-title">
-    show time line works!
+  <div class="timeline-title _Nixie"
+       data-text="experience">
+    <!-- お前はもう死んでいる  -->
+    Omae Wa Mou ShindeiruO
+    <!-- experience -->
   </div>
 
   <section class="timeline">
-    <ul>
-      <li>
+    <ul class="timeline-menu">
+      <li class="timeline-list"
+          *ngFor="let item of experience">
+        <div class="timelines-box-title">
+          <time>{{item.year}} - {{item.until}}</time>
+        </div>
+        <div class="timelines-box-body">
+          <p class="title is-4">{{item.company}}</p>
+          <p class="subtitle is-6">{{item.describe}}</p>
+          <br>
+
+          <aside *ngFor="let proj of item.projects"
+                 class="menu">
+            <p class="menu-label">
+              {{proj.projName}}
+            </p>
+            <p class="">
+              {{proj.projDescribe}}
+            </p>
+            <ul class="menu-list">
+              <li *ngFor="let tech of proj.projTech">
+                <a>{{tech}}</a>
+              </li>
+            </ul>
+          </aside>
+
+        </div>
+      </li>
+      <!-- <li>
         <div class="timelines-box-title">
           <time>2017 - NOW</time>
         </div>
-        <div class="timelines-box-body">
+        <div class="timelines-box-body ">
           Some content here
           Some content here
           Some content here
@@ -236,9 +80,7 @@
         <div class="timelines-box-body">
           Vertice Hires me
         </div>
-      </li>
-
-      <!-- more list items here -->
+      </li> -->
     </ul>
   </section>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Title } from '../../models/shared';
+import { Title } from '../../../models/shared';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

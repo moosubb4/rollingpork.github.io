@@ -21,3 +21,17 @@ body {
 ._fontAnton {
     font-family: 'Anton', sans-serif;
 }
+
+._Nixie {
+    font-family: 'Nixie One', cursive;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+._Baloo {
+    font-family: 'Baloo Bhaijaan', cursive;
+}
+
+._Jamjuree {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
