@@ -25,17 +25,31 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
+    /* width: 20px;
+    height: 20px; */
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: inherit;
-    border: inset 7px #333;
-    background-color: #000000;
+    /* border: inset 7px #333;
+    background-color: #000000; */
+    border: double 7px #31babf;
+    background-color: #095556;
     box-shadow: 4px 3px 6px grey;
   }
 
   /*textbox div*/
-  .timeline ul li div {
+  /* .timeline ul li div{
+    position: relative;
+    bottom: 7px;
+    width: 400px;
+    padding: 15px;
+    background: #F45B69;
+    box-shadow: 4px 3px 15px grey;
+    border-radius: 11px;
+  } */
+
+  .timeline ul li .timelines-box-body {
     position: relative;
     bottom: 7px;
     width: 400px;
@@ -45,22 +59,19 @@
     border-radius: 11px;
   }
 
-  /*textbox div*/
-  .timeline ul li:nth-child(odd) div time {
-    color: white;
-    margin-right: 20px;
-    line-height: inherit;
-  }
-
-  /*textbox div*/
-  .timeline ul li:nth-child(even) div time {
-    color: white;
-    margin-right: 20px;
-    line-height: inherit;
+  .timeline ul li .timelines-box-title {
+    position: relative;
+    top: 50%;
+    bottom: 7px;
+    width: 400px;
+    padding: 15px;
+    /* background: rgb(122, 244, 91); */
+    /* box-shadow: 4px 3px 15px grey; */
+    /* border-radius: 11px;                                                                                                                                                                     */
   }
 
   /*textbox pointer*/
-  .timeline ul li div::before {
+  .timeline ul li .timelines-box-body::before {
     content: '';
     position: absolute;
     bottom: 7px;
@@ -69,12 +80,35 @@
     border-style: solid;
   }
 
+  /*textbox div*/
+  /* .timeline ul li:nth-child(odd) div time {
+    color: rgb(14, 18, 223);
+    margin-right: 20px;
+    line-height: inherit;
+  } */
+
+  /*textbox div*/
+  /* .timeline ul li:nth-child(even) div time {
+    color: white;
+    margin-right: 20px;
+    line-height: inherit;
+  } */
+
   /* odd box style */
-  .timeline ul li:nth-child(odd) div {
+
+  .timeline ul li:nth-child(odd) .timelines-box-title {
+    left: -439px;
+    top: 50px;
+    text-align: right;
+    font-size: 25px;
+    line-height: inherit;
+  }
+
+  .timeline ul li:nth-child(odd) .timelines-box-body {
     left: 45px;
   }
 
-  .timeline ul li:nth-child(odd) div::before {
+  .timeline ul li:nth-child(odd) .timelines-box-body::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #F45B69 transparent transparent;
@@ -82,11 +116,19 @@
 
   /* even box style */
 
-  .timeline ul li:nth-child(even) div {
+  .timeline ul li:nth-child(even) .timelines-box-title {
+    left: 45px;
+    top: 50px;
+    font-size: 25px;
+    line-height: inherit;
+  }
+
+  .timeline ul li:nth-child(even) .timelines-box-body {
     left: -439px;
   }
 
-  .timeline ul li:nth-child(even) div::before {
+
+  .timeline ul li:nth-child(even) .timelines-box-body::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
     border-color: transparent transparent transparent #F45B69;
@@ -122,13 +164,11 @@
       border-width: 8px 16px 8px 0;
       border-color: transparent rgb(244, 91, 236) transparent transparent;
     }
-
-
   }
 
 </style>
 
-<div class="_fontOpensans">
+<div class="_fontAnton">
 
   <div class="timeline-title">
     show time line works!
@@ -137,11 +177,10 @@
   <section class="timeline">
     <ul>
       <li>
-        <div>
-          1999
+        <div class="timelines-box-title">
+          <time>2017 - NOW</time>
         </div>
-        <div>
-          <time>1934</time>
+        <div class="timelines-box-body">
           Some content here
           Some content here
           Some content here
@@ -159,21 +198,27 @@
           Some content here
           Some content here
           Some content here
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>1995</time>
-          I was born I was born I was born
-          I was born I was born I was born
-          I was born I was born I was born
-          I was born I was born I was born
         </div>
       </li>
       <li>
-        <div>
-          <time>2018</time>
-          Vertice Hire me
+        <div class="timelines-box-title">
+          1998 <time>1995</time>
+        </div>
+        <div class="timelines-box-body">
+          <p>
+            I was born I was born I was born
+            I was born I was born I was born
+            I was born I was born I was born
+            I was born I was born I was born
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="timelines-box-title">
+          1997 <time>2018</time>
+        </div>
+        <div class="timelines-box-body">
+          Vertice Hires me
         </div>
       </li>
 
