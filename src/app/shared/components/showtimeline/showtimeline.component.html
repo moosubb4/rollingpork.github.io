@@ -136,8 +136,12 @@
 
   /*  responsive  */
   @media screen and (max-width: 900px) {
-    .timeline ul li div {
-      width: 250px;
+
+    .timeline ul li .timelines-box-title {
+      /* left: 45px; */
+      /* top: 50px; */
+      font-size: 25px;
+      line-height: inherit;
     }
 
     .timeline ul li:nth-child(even) div {
@@ -147,6 +151,7 @@
   }
 
   @media screen and (max-width: 600px) {
+
     .timeline ul li {
       margin-left: 20px;
     }
@@ -155,14 +160,19 @@
       width: calc(100vw - 91px);
     }
 
-    .timeline ul li:nth-child(even) div {
+    .timeline ul li:nth-child(even) .timelines-box-body {
       left: 45px;
     }
 
-    .timeline ul li:nth-child(even) div::before {
-      left: -15px;
-      border-width: 8px 16px 8px 0;
-      border-color: transparent rgb(244, 91, 236) transparent transparent;
+    .timeline ul li:nth-child(even) .timelines-box-title {
+      left: 45px;
+      top: 0;
+    }
+
+    .timeline ul li:nth-child(odd) .timelines-box-title {
+      left: 45px;
+      top: 0;
+      text-align: left;
     }
   }
 
