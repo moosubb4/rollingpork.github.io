@@ -18,60 +18,43 @@
   <div class="section main">
     <div class="container">
       <div class="columns">
-        <div class="column is-half is-offset-one-fifth">
-          <!-- <figure class="image is-128x128"
-                  style="justify-content: center;">
-            <img class="is-rounded"
-                 src="./assets/img/mecongrat.jpg"
-                 alt="Me">
-          </figure> -->
+        <div class="column is-one-third"></div>
+        <div class="column is-one-third has-text-centered">
 
-          <!-- <img class="pic-me"
-               src="./assets/img/Cubot.JPG"
-               alt="Me">
-          <br>
 
-          <p style="margin-top:20px; font-size:1.5rem;">Thanathorn Kelatimongkolkul</p>
-          <hr>
-          <p><b>Date of birth</b> : 4 April 1995 </p>
-          <p><b>Age</b> : 23 years old</p>
-          <p><b>Personality</b> : Friendly</p>
-          <p><b>Religion</b> : Buddhist</p>
-          <p><b>Nationality</b> : Thai</p>
-          <p><b>Height / weight</b> : 168cm / 100kgs.<small> (fat guy)</small></p>
-          <p><b>Language</b> : Thai ( Native ) , English ( Intermediate )</p>
-          <p><b>Contact</b> : Tel (+66)875571721</p>
-          <p><b>Email</b> : rollingpork@gmail.com</p> -->
-
-          <!-- <img class=""
-               src="{{personalData.pic.path}}"
-               alt="Me"> -->
-
+          <!-- has-text-centered -->
           <!-- <figure class="images">
             <img class="round"
-                 src="{{personalData.pic.path}}"
+                 src="./assets/img/typingcat.gif"
                  alt="MyPic">
           </figure> -->
 
-          <!--[ngStyle]="{'margin': '-10% 0% 0% 14%'}" [ngStyle]="{'width': '300px'}"F-->
+          <figure class="images has-text-centered">
+            <img class="round"
+                 src="{{personalData.pic.path}}"
+                 alt="MyPic">
+          </figure>
 
-          <p class="has-text-dark has-text-weight-semibold">
-            {{personalData.name}} {{personalData.surname}}
-          </p>
-          <p><b>Date of birth</b> : {{personalData.birthDate | date:'d MMMM y'}}</p>
-          <p><b>Age</b> : {{personalData.birthDate | age}}</p>
-          <p><b>Personality</b> : {{personalData.Personality}}</p>
-          <p><b>Nationality</b> : {{personalData.Nationality}}</p>
-          <p><b>Religion</b> : {{personalData.Religion}}</p>
-          <p><b>Language</b> :
-            {{personalData.Language[0].Language}} ({{personalData.Language[0].level}}),
-            {{personalData.Language[1].Language}} ({{personalData.Language[1].level}})
-          </p>
-          <p><b>Contact</b> : {{personalData.contact.tel}}</p>
-          <p><b>Email</b> : {{personalData.contact.email}}</p>
+          <div class="">
+            <p class="has-text-dark has-text-weight-semibold">
+              {{personalData.name}} {{personalData.surname}}
+            </p>
+            <p><b>Date of birth</b> : {{personalData.birthDate | date:'d MMMM y'}}</p>
+            <p><b>Age</b> : {{personalData.birthDate | age}}</p>
+            <p><b>Personality</b> : {{personalData.Personality}}</p>
+            <p><b>Nationality</b> : {{personalData.Nationality}}</p>
+            <p><b>Religion</b> : {{personalData.Religion}}</p>
+            <p><b>Language</b> :
+              {{personalData.Language[0].Language}} ({{personalData.Language[0].level}}),
+              {{personalData.Language[1].Language}} ({{personalData.Language[1].level}})
+            </p>
+            <p><b>Contact</b> : {{personalData.contact.tel}}</p>
+            <p><b>Email</b> : {{personalData.contact.email}}</p>
+          </div>
           <hr>
 
         </div>
+        <div class="column is-one-third"></div>
       </div>
 
       <div>

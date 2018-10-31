@@ -25,34 +25,9 @@ export class HomeComponent implements OnInit {
   };
 
   constructor(private _simple: SampleServiceService) {
-    // this.personalData = {
-    //   name: 'Thanathorn',
-    //   surname: 'Kelatimongkolkul',
-    //   birthDate: '04/04/1995',
-    //   age: 23,
-    //   Personality: ['Friendly', 'Responsible'],
-    //   Religion: 'Buddhist',
-    //   Nationality: 'Thai',
-    //   Height: 169,
-    //   weight: 100,
-    //   Language: [
-    //     { Language: 'Thai', level: 'Native' },
-    //     { Language: 'English', level: 'Intermediate' }
-    //   ],
-    //   contact: {
-    //     tel: '0875571721',
-    //     email: 'rollingpork@gmail.com'
-    //   },
-    //   pic: {
-    //     path: './assets/img/me2.png',
-    //     width: 300,
-    //     cropping: [-10, 0, 0, 14]
-    //   }
-    // };
-
     this.personalData = {
-      name: 'John',
-      surname: 'Ceena',
+      name: 'Thanathorn',
+      surname: 'Kelatimongkolkul',
       birthDate: '04/04/1995',
       age: 23,
       Personality: ['Friendly', 'Responsible'],
@@ -79,8 +54,8 @@ export class HomeComponent implements OnInit {
       {
         year: 2017,
         until: 2020,
-        company: 'VotecIntermediate',
-        describe: 'Frontend Developer',
+        company: 'Vertice-International [TH]',
+        describe: 'position : Frontend Developer [1/11/2017]',
         projects: [
           {
             projName: 'Kurumajiten',
