@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
         year: 2017,
         until: 2020,
         company: 'Vertice-International [TH]',
-        describe: 'position : Frontend Developer [1/11/2017]',
+        describe: 'Frontend Developer [1/11/2017]',
         projects: [
           {
             projName: 'Kurumajiten',

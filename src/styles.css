@@ -22,16 +22,16 @@ body {
     font-family: 'Anton', sans-serif;
 }
 
-._Nixie {
+._fontNixie {
     font-family: 'Nixie One', cursive;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-._Baloo {
+._fontBaloo {
     font-family: 'Baloo Bhaijaan', cursive;
 }
 
-._Jamjuree {
+._fontJamjuree {
     font-family: 'Bai Jamjuree', sans-serif;
 }

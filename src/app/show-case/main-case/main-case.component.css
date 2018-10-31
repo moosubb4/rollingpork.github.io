@@ -1,14 +1,17 @@
 .case-container {
     display: flex;
-    /* border: solid black; */    
+    /* border: solid black; */
     flex-flow: row wrap;
     justify-content: center;
+    /* padding: 15px 30px; */
     /* padding: 0 40px; */
 }
 
 .case-container::after {
     content: "";
-    flex: auto; 
+    flex: auto;
+    /* flex: 0 1 auto;
+    margin: 1px; */
 }
 
 .case-container>.case-item {
@@ -58,4 +61,8 @@ label>.item-name {
 label>.item-date {
     font-size: 1rem;
     text-align: right;
+}
+
+@media screen and (max-width: 710px) {
+
 }

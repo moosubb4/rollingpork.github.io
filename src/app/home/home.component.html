@@ -19,7 +19,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-one-third"></div>
-        <div class="column is-one-third has-text-centered">
+        <div class="column is-one-third">
 
 
           <!-- has-text-centered -->
@@ -33,10 +33,41 @@
             <img class="round"
                  src="{{personalData.pic.path}}"
                  alt="MyPic">
+            <figcaption>
+              <p class="has-text-weight-semibold _fontAnton title is-3">
+                {{personalData.name}} {{personalData.surname}}
+              </p>
+            </figcaption>
           </figure>
 
-          <div class="">
-            <p class="has-text-dark has-text-weight-semibold">
+
+
+          <div class="columns">
+            <div class="column is-half has-text-right">
+              <p><b>Date of birth</b></p>
+              <p><b>Age</b></p>
+              <p><b>Personality</b></p>
+              <p><b>Nationality</b></p>
+              <p><b>Religion</b></p>
+              <p><b>Language</b></p>
+              <p><b>Contact</b></p>
+              <p><b>Email</b></p>
+            </div>
+            <div class="column is-half">
+              <p>{{personalData.birthDate | date:'d MMMM y'}}</p>
+              <p>{{personalData.birthDate | age}}</p>
+              <p>{{personalData.Personality}}</p>
+              <p>{{personalData.Nationality}}</p>
+              <p>{{personalData.Religion}}</p>
+              <p>
+                {{personalData.Language[0].Language}} ,
+                {{personalData.Language[1].Language}}
+                <!-- ({{personalData.Language[1].level}}) ({{personalData.Language[0].level}})-->
+              </p>
+              <p>{{personalData.contact.tel}}</p>
+              <p>{{personalData.contact.email}}</p>
+            </div>
+            <!-- <p class="has-text-dark has-text-weight-semibold">
               {{personalData.name}} {{personalData.surname}}
             </p>
             <p><b>Date of birth</b> : {{personalData.birthDate | date:'d MMMM y'}}</p>
@@ -49,7 +80,7 @@
               {{personalData.Language[1].Language}} ({{personalData.Language[1].level}})
             </p>
             <p><b>Contact</b> : {{personalData.contact.tel}}</p>
-            <p><b>Email</b> : {{personalData.contact.email}}</p>
+            <p><b>Email</b> : {{personalData.contact.email}}</p> -->
           </div>
           <hr>
 

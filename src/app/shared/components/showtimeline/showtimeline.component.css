@@ -5,6 +5,10 @@
     font-size: 35px;
 }
 
+.timeline {
+    color: #fff;
+}
+
 /*verticle center line*/
 
 .timeline .timeline-menu .timeline-list {
@@ -33,8 +37,10 @@
     background: inherit;
     /* border: inset 7px #333;
     background-color: #000000; */
-    border: double 7px #31babf;
-    background-color: #095556;
+    /* border: double 7px #31babf; */
+    border: double 7px #ffffff;
+    background-color: hsl(204, 86%, 53%);
+    /*#095556;*/
     box-shadow: 4px 3px 6px grey;
 }
 
@@ -55,7 +61,8 @@
     bottom: 7px;
     width: 400px;
     padding: 15px;
-    background: #7cff7c;
+    background: hsl(204, 86%, 53%);
+    /* #7cff7c;*/
     box-shadow: 4px 3px 15px grey;
     border-radius: 11px;
 }
@@ -114,13 +121,14 @@
 
 .timelines-box-body>p:first-child {
     /* padding: 0 5px 0 5px; */
+    color: #fff;
     border-bottom: solid 2px;
 }
 
 .timeline .timeline-menu .timeline-list:nth-child(odd) .timelines-box-body::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #7cff7c transparent transparent;
+    border-color: transparent hsl(204, 86%, 53%) transparent transparent;
 }
 
 /* even box style */
@@ -139,12 +147,22 @@
 .timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-body::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #7cff7c;
+    border-color: transparent transparent transparent hsl(204, 86%, 53%);
 }
 
 /*  responsive  */
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
+    .timeline .timeline-menu .timeline-list .timelines-box-title {
+        font-size: 25px;
+        line-height: inherit;
+    }
+    .timeline .timeline-menu .timeline-list:nth-child(even) div {
+        left: -289px;
+    }
+} */
+
+@media screen and (max-width: 885px) {
     .timeline .timeline-menu .timeline-list .timelines-box-title {
         /* left: 45px; */
         /* top: 50px; */
@@ -155,9 +173,6 @@
         left: -289px;
         /*250+45-6*/
     }
-}
-
-@media screen and (max-width: 600px) {
     .timeline .timeline-menu .timeline-list {
         margin-left: 20px;
     }
@@ -179,7 +194,7 @@
     .timeline .timeline-menu .timeline-list:nth-child(even) .timelines-box-body::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent #7cff7c transparent transparent;
+        border-color: transparent hsl(204, 86%, 53%) transparent transparent;
     }
 }
 

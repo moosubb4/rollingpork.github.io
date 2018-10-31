@@ -18,6 +18,7 @@ export class MainCaseComponent implements OnInit {
     subTitle: 'show my angular work'
   };
   public onBorder: boolean;
+  public showMenu: string;
 
   constructor(private _serviceSample: SampleServiceService) {
     this.onBorder = false;
