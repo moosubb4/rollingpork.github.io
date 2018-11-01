@@ -1,26 +1,9 @@
-<!-- <div class="image" [ngStyle]="{'background-image':'url(' + '/assets/img/field.gif' + ')'}"> -->
 <div>
-
-  <!-- <div class="is-12">
-    <h2>About me</h2>
-  </div>
-
-  <section class="hero is-link is-fullheight">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Fullheight hero with navbar
-        </h1>
-      </div>
-    </div>
-  </section> -->
-
   <div class="section main">
     <div class="container">
       <div class="columns">
         <div class="column is-one-third"></div>
         <div class="column is-one-third">
-
 
           <!-- has-text-centered -->
           <!-- <figure class="images">
@@ -39,8 +22,6 @@
               </p>
             </figcaption>
           </figure>
-
-
 
           <div class="columns">
             <div class="column is-half has-text-right">
@@ -67,20 +48,6 @@
               <p>{{personalData.contact.tel}}</p>
               <p>{{personalData.contact.email}}</p>
             </div>
-            <!-- <p class="has-text-dark has-text-weight-semibold">
-              {{personalData.name}} {{personalData.surname}}
-            </p>
-            <p><b>Date of birth</b> : {{personalData.birthDate | date:'d MMMM y'}}</p>
-            <p><b>Age</b> : {{personalData.birthDate | age}}</p>
-            <p><b>Personality</b> : {{personalData.Personality}}</p>
-            <p><b>Nationality</b> : {{personalData.Nationality}}</p>
-            <p><b>Religion</b> : {{personalData.Religion}}</p>
-            <p><b>Language</b> :
-              {{personalData.Language[0].Language}} ({{personalData.Language[0].level}}),
-              {{personalData.Language[1].Language}} ({{personalData.Language[1].level}})
-            </p>
-            <p><b>Contact</b> : {{personalData.contact.tel}}</p>
-            <p><b>Email</b> : {{personalData.contact.email}}</p> -->
           </div>
           <hr>
 
@@ -88,61 +55,11 @@
         <div class="column is-one-third"></div>
       </div>
 
-      <div>
-        <app-showtimeline [experience]="experiencesData"></app-showtimeline>
-      </div>
-
-      <!-- <button (click)="newWindow()">Open Windows</button> -->
-      <!-- <h3 (dblclick)="hiddenLab = !hiddenLab">**Hidden Lab</h3>
-      <div *ngIf="hiddenLab">
-        <span>Line=> <input type="text"
-                 [(ngModel)]="msg"></span>
-        <button class="button is-success"
-                (click)="sendLine()">Line!</button>
+      <div class="columns">
+        <div class="column is-one-third"></div>
+        <div class="column is-one-third">
+          <app-showtimeline [experience]="experiencesData"></app-showtimeline>
+        </div>
+        <div class="column is-one-third"></div>
       </div>
     </div>
-  </div> -->
-
-
-
-      <!-- <div class="is-pulled-left ">
-        <p>test1</p>
-      </div>
-      <div class="is-pulled-right">
-        <p>test2</p>
-      </div> -->
-      <!-- 
-  <fa-icon [icon]="['fas', 'cloud']"
-           size="xs"></fa-icon>
-  <fa-icon [icon]="['fab', 'github']"
-           [spin]="true"
-           size="4x"></fa-icon>
-  <fa-icon [icon]="['fas', 'coffee']"
-           size="6x"></fa-icon> -->
-
-      <!-- <div style="text-align:center">
-    <fa-icon [icon]="faCoffee"></fa-icon>
-  </div> -->
-
-      <!-- <div class="has-text-centered space">
-    <a href="https://github.com/moosubb4/">
-      <span class="icon is-medium">
-        <fa-icon [icon]="['fab', 'github']"
-                 size="3x">
-        </fa-icon>
-        github.com/moosubb4
-      </span>
-    </a>
-    
-
-    <a href="https://www.facebook.com/mookaki">
-      <span class="icon is-medium">
-        <fa-icon [icon]="['fab', 'facebook']"
-                 size="3x">
-        </fa-icon>
-        facebook.com/mookaki
-      </span>
-    </a>
-  </div> -->
-    </div>
-    <!-- <div class="image"></div> -->

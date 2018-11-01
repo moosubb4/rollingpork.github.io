@@ -1,12 +1,12 @@
 /*==========Text========*/
 
+.timeline {
+    /* color: #fff; */
+}
+
 .timeline-title {
     text-align: center;
     font-size: 35px;
-}
-
-.timeline {
-    color: #fff;
 }
 
 /*verticle center line*/
@@ -46,16 +46,6 @@
 
 /*textbox div*/
 
-/* .timeline .timeline-menu li div{
-    position: relative;
-    bottom: 7px;
-    width: 400px;
-    padding: 15px;
-    background: #F45B69;
-    box-shadow: 4px 3px 15px grey;
-    border-radius: 11px;
-  } */
-
 .timeline .timeline-menu .timeline-list .timelines-box-body {
     position: relative;
     bottom: 7px;
@@ -88,22 +78,6 @@
     height: 0;
     border-style: solid;
 }
-
-/*textbox div*/
-
-/* .timeline ul .timeline-list:nth-child(odd) div time {
-    color: rgb(14, 18, 223);
-    margin-right: 20px;
-    .timeline-listne-height: inherit;
-  } */
-
-/*textbox div*/
-
-/* .timeline ul .timeline-list:nth-child(even) div time {
-    color: white;
-    margin-right: 20px;
-    .timeline-listne-height: inherit;
-  } */
 
 /* odd box style */
 
@@ -151,16 +125,6 @@
 }
 
 /*  responsive  */
-
-/* @media screen and (max-width: 900px) {
-    .timeline .timeline-menu .timeline-list .timelines-box-title {
-        font-size: 25px;
-        line-height: inherit;
-    }
-    .timeline .timeline-menu .timeline-list:nth-child(even) div {
-        left: -289px;
-    }
-} */
 
 @media screen and (max-width: 885px) {
     .timeline .timeline-menu .timeline-list .timelines-box-title {

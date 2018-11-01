@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit {
         .subscribe((data) => console.log('sendLineMassages', data), // success path
           (error) => console.log('sendLineMassages error', error));
 
-      // solve this https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript 
+      // solve this https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
       // get query string from url javascript
     }
 
