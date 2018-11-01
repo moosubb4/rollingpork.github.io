@@ -1,0 +1,14 @@
+.round {
+    width: 360px;
+    border-radius: 50%;
+}
+
+.pic-me>figure {
+    overflow: hidden;
+    margin: 0;
+}
+
+.pic-me>figure img {
+    display: block;
+    width: 100%;
+}
