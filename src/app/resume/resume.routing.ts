@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
+import { MainPagesComponent } from './main-pages/main-pages.component';
+
+
+const appRoutesShowcase: Routes = [
+  {
+    path: '', component: MainPagesComponent
+  }];
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
+  imports: [RouterModule.forChild(appRoutesShowcase)],
+  exports: [RouterModule],
+  declarations: [MainPagesComponent]
 })
 export class ResumeRoutingModule { }
