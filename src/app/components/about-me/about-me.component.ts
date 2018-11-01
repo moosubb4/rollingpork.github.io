@@ -115,7 +115,7 @@ export class AboutMeComponent implements OnInit {
     },
     workExperience: [
       {
-        companyName: 'Vertice-International',
+        companyName: 'VERTICE INTERNATIONAL CO.,LTD',
         position: 'Frontend Developer',
         salary: 26500,
         working: { start: 2017, end: null },
@@ -129,7 +129,7 @@ export class AboutMeComponent implements OnInit {
           {
             name: 'Carstamate',
             describe: 'Japanese Car Trading & Management System  build by Angular',
-            logo: './assets/logo/carstarmate.jpg',
+            logo: './assets/logo/carstamate.jpg',
             link: 'https://carsta.cloud/login'
           },
         ]

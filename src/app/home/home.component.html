@@ -1,49 +1,28 @@
-<div>
-  <div class="section main">
-    <div class="container">
-      <div class="columns"
+<!-- <div>
+  <div class="section main"> -->
+<div class="container">
+  <!-- <div class="columns"
            style="border: solid 1px yellow;margin: 1px">
         <div class="column is-one-fifth"
              style="border: solid 1px red;margin: 1px"></div>
         <div class="column is-third-fifth"
              style="border: solid 1px blue;margin: 1px">
-
-          <!-- ƒhas-text-centered -->
           <figure class="
-             images
-             has-text-centered">
+                 images
+                 has-text-centered">
             <img class="round"
-                 src="./assets/img/typingcat.gif"
+                 src="{{personalData.pic.path}}"
                  alt="MyPic">
             <figcaption>
-              <p class="title is-2 _fontAnton">
-                Nya Nyaa!
-              </p>
-              <p class="title is-3 _fontAnton">
-                Meow
-              </p>
-              <p class="subtitle  _fontAnton">
-                Hi guys , I looking for f*ckend delivery portable
+              <p class="has-text-weight-semibold _fontAnton title is-3">
+                {{personalData.name}} {{personalData.surname}}
               </p>
             </figcaption>
           </figure>
 
-          <!-- <figure class="
-                 images
-                 has-text-centered">
-                <img class="round"
-                     src="{{personalData.pic.path}}"
-                     alt="MyPic">
-                <figcaption>
-                  <p class="has-text-weight-semibold _fontAnton title is-3">
-                    {{personalData.name}} {{personalData.surname}}
-                  </p>
-                </figcaption>
-          </figure> -->
-
           <div class="columns"
                style="border: solid 1px yellow;margin: 1px">
-            <!-- <div class="column is-half has-text-right">
+            <div class="column is-half has-text-right">
               <p><b>Date of birth</b></p>
               <p><b>Age</b></p>
               <p><b>Personality</b></p>
@@ -65,26 +44,25 @@
               </p>
               <p>{{personalData.contact.tel}}</p>
               <p>{{personalData.contact.email}}</p>
-            </div> -->
+            </div>
           </div>
           <hr>
 
         </div>
         <div class="column is-one-fifth"
              style="border: solid 1px green;margin: 1px"></div>
-      </div>
+      </div> -->
 
-      <div class="columns"
-           style="border: solid 1px yellow;margin: 1px">
-        <!-- <div class="column is-one-fifth"
-             style="border: solid 1px red;margin: 1px"></div> -->
+  <div class="columns">
+    <!-- <div class="column is-one-fifth"
+         style="border: solid 1px red;margin: 1px"></div>  style="border: solid 1px yellow;margin: 1px"-->
 
-        <div class="column is-third-fifth"
-             style="border: solid 1px blue;margin: 1px">
-          <!-- <app-showtimeline [experience]="experiencesData"></app-showtimeline> -->
-          <app-about-me></app-about-me>
-        </div>
-        <!-- <div class="column is-one-fifth"
-             style="border: solid 1px green;margin: 1px"></div> -->
-      </div>
+    <div class="column is-full">
+      <!-- <app-showtimeline [experience]="experiencesData"></app-showtimeline>  style="border: solid 1px blue;margin: 1px"-->
+      <app-about-me></app-about-me>
     </div>
+
+    <!-- <div class="column is-one-fifth"
+         style="border: solid 1px green;margin: 1px"></div> -->
+  </div>
+</div>

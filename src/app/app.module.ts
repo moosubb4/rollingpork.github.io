@@ -18,13 +18,15 @@ import { ShowcaseRoutingModule } from './show-case/showcase.routing';
 import { ResumeRoutingModule } from './resume/resume.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCoffee, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faCloud, faBirthdayCake } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-library.add(faCoffee, faCloud, faGithub, faFacebook);
+
+library.add(faCoffee, faCloud, faGithub, faFacebook, faBirthdayCake);
+
 
 
 
