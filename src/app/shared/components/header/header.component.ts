@@ -20,9 +20,9 @@ export class HeaderComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    // if (changes.title) {
-    //   console.log(this.title);
-    // }
+    if (changes.title) {
+      console.log(this.title);
+    }
   }
 
   /*

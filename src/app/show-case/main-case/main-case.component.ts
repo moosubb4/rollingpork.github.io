@@ -25,11 +25,11 @@ export class MainCaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._serviceSample.getBNKdata()
-      .subscribe((item: BNK48) => {
-        this.members = [...item.members];
-        console.log('members', this.members);
-      });
+    // this._serviceSample.getBNKdata()
+    //   .subscribe((item: BNK48) => {
+    //     this.members = [...item.members];
+    //     // console.log('members', this.members);
+    //   });
   }
 
 

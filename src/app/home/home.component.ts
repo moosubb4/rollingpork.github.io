@@ -50,26 +50,26 @@ export class HomeComponent implements OnInit {
       }
     };
 
-    this.experiencesData = [
-      {
-        year: 2017,
-        until: 2020,
-        company: 'Vertice-International [TH]',
-        describe: 'Frontend Developer [1/11/2017]',
-        projects: [
-          {
-            projName: 'Kurumajiten',
-            projDescribe: 'Kurumajiten of Carbell company',
-            projTech: ['Angular v.4']
-          },
-          {
-            projName: 'CarStar',
-            projDescribe: 'CarStar of CarStarMate company',
-            projTech: ['Angular v.4']
-          }
-        ]
-      }
-    ];
+    // this.experiencesData = [
+    //   {
+    //     year: 2017,
+    //     until: 2020,
+    //     company: 'Vertice-International [TH]',
+    //     describe: 'Frontend Developer [1/11/2017]',
+    //     projects: [
+    //       {
+    //         projName: 'Kurumajiten',
+    //         projDescribe: 'Kurumajiten of Carbell company',
+    //         projTech: ['Angular v.4']
+    //       },
+    //       {
+    //         projName: 'CarStar',
+    //         projDescribe: 'CarStar of CarStarMate company',
+    //         projTech: ['Angular v.4']
+    //       }
+    //     ]
+    //   }
+    // ];
 
 
 
@@ -81,21 +81,6 @@ export class HomeComponent implements OnInit {
     // console.log('location',  window.location.href);
 
   }
-
-  sendLine() {
-    this._simple.getLineOauthen().pipe().subscribe(e => console.log('getLineOauthen', e));
-    if (this.msg) {
-      this._simple.sendLineMassages(this.msg)
-        .subscribe((data) => console.log('sendLineMassages', data), // success path
-          (error) => console.log('sendLineMassages error', error));
-
-      // solve this https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-      // get query string from url javascript
-    }
-
-    // this.newWindow(this._simple.getLineOauthen());
-  }
-
   newWindow(url: string) {
     if (url) {
       // const url = 'https://moosubb4.github.io/rollingpork.github.io/home';

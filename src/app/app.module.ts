@@ -23,6 +23,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee, faCloud } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 library.add(faCoffee, faCloud, faGithub, faFacebook);
 
 
@@ -31,6 +32,7 @@ library.add(faCoffee, faCloud, faGithub, faFacebook);
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
