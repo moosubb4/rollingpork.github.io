@@ -1,37 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 html,
 body {
     height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 ._fontSrisakdi {
     font-family: 'Srisakdi', cursive;
 }
 
-._fontOpensans {
-    font-family: 'Open Sans', sans-serif;
-}
-
 ._fontAnton {
     font-family: 'Anton', sans-serif;
+}
+
+ƒ ._fontBaloo {
+    font-family: 'Baloo Bhaijaan', cursive;
+}
+
+._fontConsol {
+    font-family: 'Inconsolata', monospace;
+}
+
+/* 
+._fontRoboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+._fontJamjuree {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+._fontOpensans {
+    font-family: 'Open Sans', sans-serif;
 }
 
 ._fontNixie {
     font-family: 'Nixie One', cursive;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-._fontBaloo {
-    font-family: 'Baloo Bhaijaan', cursive;
-}
-
-._fontJamjuree {
-    font-family: 'Bai Jamjuree', sans-serif;
-}
+} */
