@@ -3,6 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MainPagesComponent } from './main-pages/main-pages.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faFilePdf);
+
 
 const appRoutesShowcase: Routes = [
   {
@@ -10,7 +16,7 @@ const appRoutesShowcase: Routes = [
   }];
 
 @NgModule({
-  imports: [RouterModule.forChild(appRoutesShowcase)],
+  imports: [RouterModule.forChild(appRoutesShowcase), FontAwesomeModule],
   exports: [RouterModule],
   declarations: [MainPagesComponent]
 })

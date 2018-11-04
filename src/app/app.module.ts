@@ -22,10 +22,13 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCoffee, faCloud, faBirthdayCake } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee, faCloud, faBirthdayCake, faPhone, faEnvelope, faGlobeAsia, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faFacebook, faAngular, faVuejs, faReact } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faCoffee, faCloud, faGithub, faFacebook, faBirthdayCake);
+library.add(
+  faCoffee, faCloud, faGithub, faFacebook, faBirthdayCake, faAngular, faVuejs,
+  faPhone, faReact, faEnvelope, faGlobeAsia, faFilePdf
+);
 
 
 
