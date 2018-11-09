@@ -8,6 +8,22 @@
     margin: 0;
 }
 
+.fa-icon {
+    margin: 0 15px;
+}
+
+.blink_me {
+    color: white;
+    font-stretch: condensed;
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
 /* .pic-me>figure img {
     display: block;
     width: 100%;

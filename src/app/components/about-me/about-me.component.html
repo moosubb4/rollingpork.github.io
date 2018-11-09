@@ -3,9 +3,9 @@ border: solid 1px #d4d4d4;
 border-radius: 16px;
 margin: 20px auto;
 padding: 10px;
-background-color: #333;
+background-color: rgb(61, 61, 61);
 "
-     class="_fontAnton">
+     class="">
   <!--=======================================-->
   <div class="tile is-ancestor">
     <div class="tile is-parent">
@@ -38,34 +38,31 @@ background-color: #333;
     <div class="tile is-vertical">
 
       <div class="tile is-parent">
-        <article class="tile is-child notification is-warning">
+        <article class="tile is-child notification is-danger">
           <div class="content">
             <p class="title">Personal Data</p>
+            <hr>
             <div class="content">
-              <!-- <p>name-surname: Thanathorn Kelatimongkolkul</p> -->
-              <!-- <span class="icon is-medium">
-                <fa-icon [icon]="['fas', 'home']"
-                         size="xs"></fa-icon>
-              </span> -->
-
               <p>
-                <a class="icon is-medium">
+                <a class="icon is-medium fa-icon">
                   <fa-icon [icon]="['fas', 'birthday-cake']"
                            size="2x">
                   </fa-icon>
                 </a>
                 04 April 1995
               </p>
+
               <p>
-                <a class="icon is-medium">
+                <a class="icon is-medium fa-icon">
                   <fa-icon [icon]="['fas', 'phone']"
                            size="2x">
                   </fa-icon>
                 </a>
                 0875571721
               </p>
+
               <p>
-                <a class="icon is-medium">
+                <a class="icon is-medium fa-icon">
                   <fa-icon [icon]="['fas', 'envelope']"
                            size="2x">
                   </fa-icon>
@@ -73,14 +70,8 @@ background-color: #333;
                 rollingpork@gmail.com
               </p>
 
-              <!-- 
-              <span class="icon is-small">
-                <fa-icon [icon]="['fab', 'github']"
-                         size="3x">
-                </fa-icon>
-              </span> -->
               <p>
-                <a class="icon is-large"
+                <a class="icon is-medium fa-icon"
                    href="https://github.com/moosubb4/">
                   <fa-icon [icon]="['fab', 'github']"
                            size="2x">
@@ -90,19 +81,23 @@ background-color: #333;
               </p>
 
               <p>
-                <a class="icon is-large"
+                <a class="icon is-medium fa-icon"
                    href="https://moosubb4.github.io/rollingpork.github.io">
                   <fa-icon [icon]="['fas', 'globe-asia']"
                            size="2x">
                   </fa-icon>
                 </a>
-                rollingpork.github.io
+                moosubb4.github.io/rollingpork.github.io
               </p>
 
               <p>
-                <a href="https://www.linkedin.com/in/thanathorn-kelatimongkolkul-554492173/">
-                  [linkIn]
+                <a class="icon is-medium fa-icon"
+                   href="https://www.linkedin.com/in/thanathorn-kelatimongkolkul-554492173/">
+                  <fa-icon [icon]="['fab', 'linkedin']"
+                           size="2x">
+                  </fa-icon>
                 </a>
+                thanathorn-kelatimongkolkul
               </p>
 
             </div>
@@ -110,28 +105,37 @@ background-color: #333;
         </article>
       </div>
       <div class="tile is-parent">
-        <article class="tile is-child box">
-          <div class="content">
-            <p class="title">Skill</p>
-            <p class="subtitle">
-              -
-              <a class="icon is-medium">
+        <article class="tile is-child notification is-black">
+          <div class="content _fontConsol" style="color: lime;">
+            <p class="title">Technical<b class="blink_me">_</b>Skill</p>
+            <hr style="background-color: #333333;">
+            <p>C:\Users\moo-><b class="blink_me">_</b></p>
+            <p>
+              Vue.js
+              <span class="icon is-medium fa-icon">
+                <fa-icon [icon]="['fab', 'vuejs']"
+                         style="color: green"
+                         size="2x">
+                </fa-icon>
+              </span>
+            </p>
+
+            <p>
+              Angular
+              <span class="icon is-medium fa-icon">
                 <fa-icon [icon]="['fab', 'angular']"
                          style="color: red"
                          size="2x">
                 </fa-icon>
-              </a>
-              Angular
+              </span>
             </p>
-            <p class="subtitle">- NGRX</p>
-            <p class="subtitle">
-              -
-              <fa-icon [icon]="['fab', 'vuejs']"
-                       style="color: green"
-                       size="2x">
-              </fa-icon> Vue.js (Beginners)
-            </p>
-            <p class="subtitle">- Flutter(Beginners)</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Javascript</p>
+            <p>Typescript</p>
+            <p>RxJS</p>
+
+            <!-- <p>Flutter</p> -->
           </div>
         </article>
       </div>
@@ -158,9 +162,9 @@ background-color: #333;
       <div class="tile">
 
         <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification is-danger">
+          <article class="tile is-child notification is-warning">
             <p class="title">Work Experience</p>
-            <hr>
+            <hr style="background-color: #333333;">
             <div class="content">
               <p class="title is-5">VERTICE INTERNATIONAL co.,Ltd</p>
               <p>Bangkok ( 2017 - Present )</p>
@@ -168,6 +172,7 @@ background-color: #333;
             </div>
           </article>
           <article class="tile is-child notification is-success">
+            <p class="title">Internship Experience</p>
             <hr>
             <div class="content">
               <p class="title is-5">KRATOS co.,Ltd</p>
