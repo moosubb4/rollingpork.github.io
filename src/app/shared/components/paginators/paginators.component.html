@@ -1,0 +1,35 @@
+<div>
+  <div class="pagination">
+    <a href="javascript:void(0);"
+      [class.disabled]="disableBack()"
+       (click)="goFirst()">
+      <i class="glyphicon glyphicon-step-backward"></i>
+    </a>
+    <a href="javascript:void(0);"
+       [class.disabled]="disableBack()"
+       (click)="onPrevious()">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+    </a>
+    <!-- ////////////////////////////////////////////// -->
+    <a href="javascript:void(0);"
+       *ngFor="let pg of pageCurrent"
+       (click)="onSelectpage(pg)"
+       [ngClass]="{active : page === pg}">{{pg}}</a>
+    <!-- ////////////////////////////////////////////// -->
+    <a href="javascript:void(0);"
+       [class.disabled]="disableNext()"
+       (click)="onNext()">
+      <i class="glyphicon glyphicon-chevron-right "></i>
+    </a>
+    <a href="javascript:void(0);"
+       [class.disabled]="disableNext()"
+       (click)="golast()">
+      <i class="glyphicon glyphicon-step-forward"></i>
+    </a>
+    <!-- ////////////////////////////////////////////// -->
+    <select (change)="onSelectrow()"
+            [(ngModel)]="row">
+      <option *ngFor="let rop of rowsPerPageOptions">{{rop}}</option>
+    </select>
+  </div>
+</div>
