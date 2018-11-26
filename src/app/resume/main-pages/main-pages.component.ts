@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '../../models/shared';
+import PDFObject from 'pdfobject';
 
 @Component({
   selector: 'app-main-pages',
@@ -16,6 +17,8 @@ export class MainPagesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    // PDFObject.embed('./assets/thanathorn.pdf', '#example1');
   }
 
 }
