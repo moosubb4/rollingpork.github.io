@@ -19,11 +19,13 @@ import { ResumeRoutingModule } from './resume/resume.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { AboutmeComponent } from './components/aboutme/aboutme.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee, faCloud, faBirthdayCake, faPhone, faEnvelope, faGlobeAsia, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faFacebook, faAngular, faVuejs, faReact, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 library.add(
   faCoffee, faCloud, faGithub, faFacebook, faBirthdayCake, faAngular, faVuejs,
@@ -38,6 +40,7 @@ library.add(
     AppComponent,
     HomeComponent,
     AboutMeComponent,
+    AboutmeComponent,
   ],
   imports: [
     BrowserModule,
