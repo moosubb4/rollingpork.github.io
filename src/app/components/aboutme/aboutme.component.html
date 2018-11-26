@@ -1,5 +1,38 @@
 <div>
   <div *ngFor="let item of myData.personalData | keyvalue">
-    <p>{{item.value}}</p>
+
+    <div *ngIf="item.key === 'contact';else elseBlock">
+      <div *ngFor="let contact of item.value | keyvalue">
+        {{contact.value}}
+      </div>
+    </div>
+
+    <ng-template #elseBlock>
+      <p>{{item.key}}:{{item.value}}</p>
+    </ng-template>
+
   </div>
+
+  <hr>
+
+  <div *ngFor="let item of myData.education | keyvalue">
+
+    <div *ngIf="item.key === 'university';else elseBlock">
+      <div *ngFor="let university of item.value | keyvalue">
+        {{university.value}}
+      </div>
+    </div>
+
+    <div *ngIf="item.key === 'working';else elseBlock">
+      <div *ngFor="let working of item.value | keyvalue">
+        {{working.value}}
+      </div>
+    </div>
+
+    <ng-template #elseBlock>
+      <p>{{item.key}}:{{item.value}}</p>
+    </ng-template>
+
+  </div>
+
 </div>
